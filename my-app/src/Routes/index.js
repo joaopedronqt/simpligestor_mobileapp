@@ -201,7 +201,7 @@ export default function Routes() {
 
             <Tab.Screen
                 name='TabHomePage'
-                component={HomePage}
+                component={StackRoutes}
                 options={{
                     tabBarIcon: ({ color, size, focused }) => {
                         if (focused) {
@@ -250,8 +250,8 @@ export default function Routes() {
             />
 
             <Tab.Screen
-                name='TelaAgendar'
-                component={TelaAgendar}
+                name='Agendar'
+                component={Servicos}
                 options={{
                     tabBarIcon: ({ color, size, }) => (
                         <BottomTabAgendar />

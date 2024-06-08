@@ -1,12 +1,13 @@
 // AgendaDiaria.js
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import SearchBar from "../../components/BarraDePesquisa/BarraDePesquisa";
 import { styles } from "./AgendaDiariaStyle";
 
 export default function AgendaDiaria() {
   return (
-    <View style={styles.container}>
+    <ScrollView>
+      <View style={styles.container}>
       <View style={styles.searchBar}>
         <SearchBar />
       </View>
@@ -50,6 +51,32 @@ export default function AgendaDiaria() {
           </Text>
           <View style={styles.line} />
         </View>
+        
+        <View style={styles.item}>
+          <Text style={[styles.label, styles.info, styles.title]}>
+            {" "}
+            Carlinhos Das Costas Dodois{" "}
+          </Text>
+          <Text style={[styles.label, styles.info]}> Massagem Relaxante </Text>
+          <Text style={[styles.label, styles.info, styles.horario]}>
+            {" "}
+            14:00{" "}
+          </Text>
+          <View style={styles.line} />
+        </View>
+        
+        <View style={styles.item}>
+          <Text style={[styles.label, styles.info, styles.title]}>
+            {" "}
+            Carlinhos Das Costas Dodois{" "}
+          </Text>
+          <Text style={[styles.label, styles.info]}> Massagem Relaxante </Text>
+          <Text style={[styles.label, styles.info, styles.horario]}>
+            {" "}
+            14:00{" "}
+          </Text>
+          <View style={styles.line} />
+        </View>
 
         <View style={styles.item}>
           <Text style={[styles.label, styles.info, styles.title]}>
@@ -65,5 +92,6 @@ export default function AgendaDiaria() {
         </View>
       </View>
     </View>
+    </ScrollView>
   );
 }

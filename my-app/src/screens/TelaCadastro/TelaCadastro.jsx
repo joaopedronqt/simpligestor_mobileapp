@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View, ScrollView } from "react-native";
 import * as yup from "yup";
 import TelaCadastroComponents from "../../components/TelaCadastroComponents/TelaCadastro";
 import { styles } from "./TelaCadastroStyle";
@@ -67,7 +67,8 @@ export default function TelaCadastro() {
   }
 
   return (
-    <Provider>
+    <ScrollView>
+      <Provider>
       <View style={styles.screen}>
         <TelaCadastroComponents />
         <View style={styles.formWrapper}>
@@ -248,5 +249,6 @@ export default function TelaCadastro() {
         </Portal>
       </View>
     </Provider>
+    </ScrollView>
   );
 }
